@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Digital Identity Card of Shashank Srivastava - B.Tech CSE Student, AI & Machine Learning Enthusiast.">
+
+    <meta name="keywords"
+          content="Shashank Srivastava, AI, Machine Learning, Python, Flask, Web Developer, Digital Identity Card">
+
+    <meta name="author"
+          content="Shashank Srivastava">
+
+    <meta name="theme-color"
+          content="#0f172a">
+
+    <title>
+        Shashank Srivastava | Digital Identity Card
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/jpeg"
+          href="assets/profile.jpeg">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          referrerpolicy="no-referrer">
+
+</head>
+
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Main Card -->
+    <main class="card">
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+
+            <button
+                type="button"
+                id="languageBtn"
+                aria-label="Change Language">
+
+                🌍 EN
+
+            </button>
+
+            <button
+                type="button"
+                id="shareBtn"
+                title="Share"
+                aria-label="Share Profile">
+
+                <i class="fa-solid fa-share-nodes"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <img
+                id="profilePhoto"
+                src="assets/profile.jpeg"
+                alt="Profile photo of Shashank Srivastava"
+                loading="eager">
+
+            <h1 id="profileName">
+                Shashank Srivastava
+            </h1>
+
+            <h3 id="profession">
+                B.Tech CSE Student
+            </h3>
+
+            <p id="intro">
+                Passionate about AI, Machine Learning and Web Development. I enjoy building modern and useful digital solutions.
+            </p>
+
+        </section>
+
+        <!-- Contact Information -->
+        <section
+            class="contact-info"
+            aria-label="Contact Information">
+
+            <p id="emailText">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email -
+
+                shashanksrivastava323@gmail.com
+
+            </p>
+
+            <p id="phoneText">
+
+                <i class="fa-solid fa-phone"></i>
+
+                Phone -
+
+                +91 7439891664
+
+            </p>
+
+            <p id="locationText">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Location -
+
+                Kolkata, India
+
+            </p>
+
+        </section>
+
+        <!-- Social Links -->
+        <section
+            class="social-links"
+            aria-label="Social Links">
+
+            <a
+                href="https://github.com/genuineinsaan"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub Profile">
+
+                <i class="fab fa-github"></i>
+
+                GitHub
+
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/shashank-srivastava-58269b281"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn Profile">
+
+                <i class="fab fa-linkedin"></i>
+
+                LinkedIn
+
+            </a>
+
+                        <a
+                href="https://www.instagram.com/_imperfect._mess_?igsh=MWRueW1sNGttdHk0ZA=="
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram Profile">
+
+                <i class="fab fa-instagram"></i>
+
+                Instagram
+
+            </a>
+
+            <a
+                href="https://t.me/genuineinsaan_09"
+                target="_blank"
+                rel="noopener"
+                aria-label="Telegram Profile">
+
+                <i class="fab fa-telegram"></i>
+
+                Telegram
+
+            </a>
+
+        </section>
+
+        <!-- Save Contact -->
+        <section
+            class="save-contact"
+            aria-label="Save Contact">
+
+            <a
+                href="assets/contact.vcf"
+                download>
+
+                <button
+                    type="button"
+                    id="saveBtn"
+                    aria-label="Save Contact">
+
+                    <i class="fa-solid fa-address-card"></i>
+
+                    Save Contact
+
+                </button>
+
+            </a>
+
+        </section>
+
+        <!-- Contact Form -->
+        <section
+            class="contact-form"
+            aria-labelledby="contactHeading">
+
+            <h2 id="contactHeading">
+
+                Contact Me
+
+            </h2>
+
+            <form
+                id="contactForm"
+                autocomplete="off">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    autocomplete="name"
+                    required>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    autocomplete="email"
+                    required>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required></textarea>
+
+                <button type="submit">
+
+                    Send
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Chatbot -->
+        <section
+            class="chatbot"
+            aria-labelledby="chatHeading">
+
+            <h2 id="chatHeading">
+
+                Ask Me
+
+            </h2>
+
+            <div class="questions">
+
+                <button
+                    type="button"
+                    id="whoBtn">
+
+                    Who are you?
+
+                </button>
+
+                <button
+                    type="button"
+                    id="educationBtn">
+
+                    Education
+
+                </button>
+
+                <button
+                    type="button"
+                    id="skillsBtn">
+
+                    Skills
+
+                </button>
+
+                <button
+                    type="button"
+                    id="projectsBtn">
+
+                    Projects
+
+                </button>
+
+                <button
+                    type="button"
+                    id="contactBtn">
+
+                    Contact
+
+                </button>
+
+            </div>
+
+            <div
+                id="answerBox"
+                aria-live="polite">
+
+                👋 Select a question below to know more about me.
+
+            </div>
+
+        </section>
+
+    </main>
+
+        <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- EmailJS -->
+    <script>
+
+        emailjs.init({
+
+            publicKey: "DKbamemUjQLhfmz6o"
+
+        });
+
+    </script>
+
+    <!-- JavaScript Files -->
+
+    <script src="js/particles.js"></script>
+
+    <script src="js/language.js"></script>
+
+    <script src="js/chatbot.js"></script>
+
+    <script src="script.js"></script>
+
+    <!-- Toast Notification -->
+
+    <div
+        id="toast"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true">
+    </div>
+
+</body>
+
+</html>

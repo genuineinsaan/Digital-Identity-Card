@@ -1,0 +1,1142 @@
+/* ======================================================
+   GOOGLE FONT
+====================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ======================================================
+   RESET
+====================================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    color:#fff;
+
+    background:
+    linear-gradient(135deg,#020617,#0f172a,#111827);
+
+    animation:pageFade 1s ease;
+}
+
+/* ======================================================
+   PARTICLE BACKGROUND
+====================================================== */
+
+#particles-js{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-2;
+
+}
+
+/* ======================================================
+   GLASS CARD
+====================================================== */
+
+.card{
+
+    position:relative;
+
+    width:100%;
+    max-width:860px;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    box-shadow:
+
+    0 15px 45px rgba(0,0,0,.45),
+    inset 0 1px rgba(255,255,255,.08);
+
+    animation:
+
+    cardEntrance .9s ease,
+    floatingCard 6s ease-in-out infinite;
+
+}
+
+/* Glass Shine */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-140%;
+    left:-60%;
+
+    width:70%;
+    height:350%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.15),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    animation:shine 8s linear infinite;
+
+    pointer-events:none;
+
+}
+
+/* ======================================================
+   TOP BAR
+====================================================== */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+}
+
+.top-bar button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:11px 22px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+
+}
+
+.top-bar button:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.4);
+
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.hero img{
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    padding:5px;
+
+    background:
+
+    linear-gradient(
+
+        45deg,
+
+        #2563eb,
+
+        #38bdf8,
+
+        #2563eb
+
+    );
+
+    background-size:300%;
+
+    animation:
+
+    profileFloat 4s ease-in-out infinite,
+    gradientBorder 6s linear infinite;
+
+    box-shadow:
+
+    0 0 35px rgba(37,99,235,.45);
+
+}
+
+.hero h1{
+
+    margin-top:25px;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+}
+
+.hero h3{
+
+    margin-top:10px;
+
+    color:#60a5fa;
+
+    font-weight:500;
+
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:20px auto 0;
+
+    line-height:1.8;
+
+    color:#d1d5db;
+
+    font-size:15px;
+
+}
+
+/* ======================================================
+   CONTACT INFO
+====================================================== */
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin:45px 0;
+
+}
+
+.contact-info p{
+
+    padding:16px 20px;
+
+    border-radius:15px;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.contact-info p:hover{
+
+    transform:
+
+    translateY(-5px);
+
+    background:
+
+    rgba(37,99,235,.15);
+
+    box-shadow:
+
+    0 12px 25px rgba(37,99,235,.25);
+
+}
+
+.contact-info i{
+
+    width:32px;
+
+    color:#60a5fa;
+
+}
+
+/* ======================================================
+   SOCIAL LINKS
+====================================================== */
+
+.social-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin:45px 0;
+
+}
+
+.social-links a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.social-links a:hover{
+
+    transform:
+
+    translateY(-6px)
+    scale(1.05);
+
+    background:#2563eb;
+
+    box-shadow:
+
+    0 15px 30px rgba(37,99,235,.4);
+
+}
+
+/* ======================================================
+   SAVE CONTACT
+====================================================== */
+
+.save-contact{
+
+    text-align:center;
+
+    margin:45px 0;
+
+}
+
+.save-contact button{
+
+    padding:15px 38px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    transition:.35s;
+
+    animation:pulseButton 2.5s infinite;
+
+}
+
+.save-contact button:hover{
+
+    transform:
+
+    translateY(-5px)
+    scale(1.04);
+
+    box-shadow:
+
+    0 15px 35px rgba(37,99,235,.45);
+
+}
+
+/* ======================================================
+   CONTACT FORM
+====================================================== */
+
+.contact-form{
+
+    margin-top:55px;
+
+}
+
+.contact-form h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+.contact-form form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:16px;
+
+    border-radius:14px;
+
+    border:1px solid transparent;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    color:white;
+
+    resize:none;
+
+    transition:.35s;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#cbd5e1;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    outline:none;
+
+    border-color:#3b82f6;
+
+    background:
+
+    rgba(255,255,255,.10);
+
+    box-shadow:
+
+    0 0 20px rgba(59,130,246,.30);
+
+    transform:scale(1.02);
+
+}
+
+.contact-form button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    transition:.35s;
+
+}
+
+.contact-form button:hover{
+
+    transform:
+
+    translateY(-4px);
+
+    box-shadow:
+
+    0 15px 35px rgba(37,99,235,.45);
+
+}
+
+/* ======================================================
+   CHATBOT
+====================================================== */
+
+.chatbot{
+
+    margin-top:60px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.chatbot h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+.questions{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.questions button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:13px 22px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:all .35s ease;
+
+}
+
+.questions button:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.45);
+
+}
+
+#answerBox{
+
+    padding:22px;
+
+    min-height:110px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    line-height:1.8;
+
+    color:#e5e7eb;
+
+    transition:.35s;
+
+    white-space:pre-line;
+
+    animation:fadeAnswer .35s ease;
+
+    transition:.3s;
+
+}
+
+#answerBox:hover{
+
+    background:rgba(255,255,255,.10);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:768px){
+
+    body{
+
+        padding:20px 15px;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+        border-radius:22px;
+
+    }
+
+    .top-bar{
+
+        flex-wrap:wrap;
+
+        gap:12px;
+
+    }
+
+    .top-bar button{
+
+        flex:1;
+
+    }
+
+    .hero img{
+
+        width:145px;
+
+        height:145px;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero h3{
+
+        font-size:1rem;
+
+    }
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+    .social-links{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .social-links a{
+
+        justify-content:center;
+
+    }
+
+    .questions{
+
+        flex-direction:column;
+
+    }
+
+    .questions button{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .card{
+
+        padding:20px;
+
+    }
+
+    .hero img{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .hero h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .contact-form h2,
+
+    .chatbot h2{
+
+        font-size:24px;
+
+    }
+
+}
+
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes cardEntrance{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+@keyframes floatingCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes profileFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes gradientBorder{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-80%;
+
+    }
+
+    to{
+
+        left:170%;
+
+    }
+
+}
+
+@keyframes pulseButton{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(37,99,235,.4);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 28px rgba(37,99,235,.55);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(37,99,235,.4);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ======================================================
+   STAGGERED SECTION ANIMATION
+====================================================== */
+
+.hero{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.contact-info{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.social-links{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.save-contact{
+
+    animation:fadeUp 1.4s ease;
+
+}
+
+.contact-form{
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+.chatbot{
+
+    animation:fadeUp 1.8s ease;
+
+}
+
+/* ======================================================
+   SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#60a5fa;
+
+}
+
+/* ======================================================
+   TEXT SELECTION
+====================================================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+
+
+@keyframes fadeAnswer{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================================
+   TOAST NOTIFICATION
+========================================== */
+
+#toast{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    min-width:280px;
+
+    max-width:350px;
+
+    padding:16px 22px;
+
+    border-radius:14px;
+
+    color:#fff;
+
+    font-weight:500;
+
+    background:rgba(15,23,42,.95);
+
+    backdrop-filter:blur(18px);
+
+    border-left:5px solid #3b82f6;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    opacity:0;
+
+    transform:translateX(120%);
+
+    transition:.4s ease;
+
+    z-index:9999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+#toast.success{
+
+    border-left-color:#22c55e;
+
+}
+
+#toast.error{
+
+    border-left-color:#ef4444;
+
+}
+
+#toast.info{
+
+    border-left-color:#3b82f6;
+
+}
+
+@media(max-width:600px){
+
+    #toast{
+
+        left:15px;
+
+        right:15px;
+
+        min-width:auto;
+
+        max-width:none;
+
+    }
+
+}
+
+/* ==========================================
+   ACTIVE CHATBOT BUTTON
+========================================== */
+
+.questions button.active{
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 28px rgba(37,99,235,.45);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
